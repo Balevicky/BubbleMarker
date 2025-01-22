@@ -1,6 +1,11 @@
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
-
+// =============Ajout de l"audio==============
+const monAudio = () => {
+  const audio = new Audio();
+  audio.src = "./audio.mp3"
+  audio.play();
+}
 const bubblemaker = () => {
   const bubble = document.createElement("span");
   bubble.classList.add("bubble");
@@ -18,6 +23,7 @@ const bubblemaker = () => {
     counter++;
     counterDisplay.textContent = counter;
     bubble.remove();
+    monAudio();
   });
   setTimeout(() => {
     bubble.remove();
